@@ -1,18 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Import styles for the navbar
+import './Navbar.css';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Best Movies', path: '/best-movies' },
+    { name: 'Free Movies', path: '/free' },
+    { name: 'Genres', path: '/genres' },
+    { name: 'Languages', path: '/languages' },
+  ];
+
   return (
     <nav className="navbar">
-      <h1>🎬 Movie Platform</h1>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/best-movies">Best Movies</Link></li>
-        <li><Link to="/free">Free Movies</Link></li>
-        <li><Link to="/genres">Genres</Link></li>
-        <li><Link to="/languages">Languages</Link></li>
-      </ul>
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          <span className="navbar-logo-icon">🎬</span>
+          <span className="navbar-logo-text">Movie Platform</span>
+        </Link>
+        <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              className="navbar-item"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+        <button className="navbar-toggle" onClick={toggleMenu}>
+          <span className="navbar-toggle-icon"></span>
+        </button>
+      </div>
     </nav>
   );
 };
