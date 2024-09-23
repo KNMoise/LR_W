@@ -10,6 +10,23 @@ Error Handling & Loading States
 TypeScript Integration
 Testing and Deployment
 
+
+movie-search-app/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── assets/
+│   ├── services/
+│   ├── styles/
+│   ├── App.js
+│   ├── index.js
+│   └── .env
+├── package.json
+├── README.md
+└── .gitignore
+
 ---
 # Movie Search App 🎬
 
