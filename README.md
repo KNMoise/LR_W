@@ -1,5 +1,3 @@
-Here’s a sample description for your GitHub repository. It assumes you're building a project (e.g., a **Movie Search App**) and want to highlight its purpose, features, and usage:
-
 ---
 
 # Movie Search App 🎬
