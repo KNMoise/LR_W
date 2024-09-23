@@ -2,7 +2,7 @@
 
 # Movie Search App 🎬
 
-A **React-based web application** that allows users to search for movies and view detailed information about each title. The app leverages the [OMDB API](http://www.omdbapi.com/) for fetching movie data and showcases the power of **React hooks**, **Redux** for state management, and **React Router** for navigation. Built with a focus on modular, maintainable code and optimized for performance with lazy loading and code splitting.
+A **React-based web application** that allows users to search for movies and view detailed information about each title. The app leverages the [OMDB API](http://www.rwegohub.com/) for fetching movie data and showcases the power of **React hooks**, **Redux** for state management, and **React Router** for navigation. Built with a focus on modular, maintainable code and optimized for performance with lazy loading and code splitting.
 
 ## Features ✨
 - 🔍 **Search movies** by title using the OMDB API.
