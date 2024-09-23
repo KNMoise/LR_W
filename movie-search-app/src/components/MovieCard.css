@@ -1,0 +1,32 @@
+.movie-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    margin: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-info {
+    padding: 10px;
+  }
+  
+  .movie-info h3 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .movie-info p {
+    font-size: 14px;
+    color: #666;
+  }
+  
