@@ -11,7 +11,7 @@ const Home = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('');
 
   useEffect(() => {
-    fetchMovies().then(setMovies); // Fetch popular movies by default
+    fetchMovies().then(setMovies); 
   }, []);
 
   const handleSearch = (query) => {
