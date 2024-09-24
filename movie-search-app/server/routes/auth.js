@@ -34,7 +34,7 @@ router.post("/signup", async (req, res) => {
 // Guest login route
 router.post("/guest", async (req, res) => {
   try {
-    // Create a guest user token
+    //  Create a guest user token
     const token = jwt.sign({ guest: true }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });

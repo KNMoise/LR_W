@@ -3,7 +3,6 @@ import '../styles/guestLogin.scss';
 
 const GuestLogin = () => {
   const handleGuestLogin = () => {
-    // Handle guest login logic here
     console.log('Logged in as guest');
   };
 
