@@ -1,21 +1,22 @@
-// src/components/Login.js
+// client/src/components/Login.js
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../services/api';
 import '../styles/Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    // Implement your login logic here (e.g., Firebase, Node.js authentication)
-    const isAuthenticated = true; // Placeholder logic for auth
-    if (isAuthenticated) {
-      history.push('/admin/dashboard');
-    } else {
-      alert('Invalid credentials');
+    try {
+      const data = await login(email, password);
+      localStorage.setItem('token', data.token);
+      navigate('/admin/dashboard');
+    } catch (error) {
+      alert(error.error || 'Login failed');
     }
   };
 
@@ -28,12 +29,14 @@ const Login = () => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <button type="submit">Login</button>
       </form>
