@@ -1,0 +1,29 @@
+/* src/pages/MovieDetails.css */
+.movie-details {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .movie-details h2 {
+    font-size: 28px;
+  }
+  
+  .movie-details p {
+    font-size: 18px;
+  }
+  
+  .movie-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .movie-links a:hover {
+    background-color: #1976D2;
+  }
+  
